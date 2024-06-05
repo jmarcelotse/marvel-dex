@@ -24,8 +24,8 @@ jobs:
         file: ./src/Dockerfile
         push: true
         tags: |
-          jmarcelotse/projeto-tivit-cloud:v${{ github.run_number }}
-          jmarcelotse/projeto-tivit-cloud:latest
+          jmarcelotse/marve-dex:v${{ github.run_number }}
+          jmarcelotse/marve-dex:latest
 
   CD:
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
       uses: Azure/k8s-deploy@v5
       with:
         manifests: ./k8s/deployment.yaml
-        images: jmarcelotse/projeto-tivit-cloud:v${{ github.run_number }}
+        images: jmarcelotse/marve-dex:v${{ github.run_number }}

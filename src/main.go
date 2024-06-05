@@ -23,5 +23,5 @@ func main() {
 	// Adiciona o prefixo '/static/' ao caminho
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.FS(staticFiles))))
 
-	http.ListenAndServe(":5000", mux)
+	http.ListenAndServe(":6000", mux)
 }
